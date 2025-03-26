@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIPOC Diagrams – IT Business Consultancy</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .content-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007acc;
+      color: white;
+    }
+
+    td {
+      background-color: #fefefe;
+    }
+
+    .diagram-container {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .mermaid {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h1>SIPOC Overview – IT Business Consultancy</h1>
+
+    <h2>SIPOC Mapping Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>SIPOC Element</th>
+          <th>Representation in Diagrams</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Suppliers (S)</strong></td>
+          <td>
+            🔹 <code>Client</code> – provides business requirements<br>
+            🔹 <code>Vendor</code> – provides technical solutions
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Inputs (I)</strong></td>
+          <td>
+            🔹 Business requirements<br>
+            🔹 Existing IT environment<br>
+            🔹 Vendor solutions and compliance info
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Process (P)</strong></td>
+          <td>
+            🔹 Analyze requirements<br>
+            🔹 Propose IT solution<br>
+            🔹 Coordinate with vendors and internal team<br>
+            🔹 Support implementation
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Outputs (O)</strong></td>
+          <td>
+            🔹 Solution architecture<br>
+            🔹 Proposal report<br>
+            🔹 ROI analysis<br>
+            🔹 Final implemented solution
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Customers (C)</strong></td>
+          <td>
+            🔹 <code>Client</code> – receives IT solution and results
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="diagram-container">
+      <h2>Sequence Diagram</h2>
+      <div class="mermaid">
+sequenceDiagram
+    participant Client
+    participant IT Consultant
+    participant Internal Team
+    participant Vendor
+    participant System
+
+    Client->>IT Consultant: Submit business requirements
+    IT Consultant->>Client: Ask questions and feedback
+    IT Consultant->>Internal Team: Request internal analysis
+    Internal Team->>IT Consultant: Provide current IT status
+    IT Consultant->>Vendor: Request tech solutions
+    Vendor-->>IT Consultant: Share available tools/options
+    IT Consultant->>System: Analyze gaps and define solution
+    System-->>IT Consultant: Generate proposal and reports
+    IT Consultant->>Client: Present proposal and ROI analysis
+    Client-->>IT Consultant: Approve or request changes
+    IT Consultant->>Internal Team: Start implementation support
+    Internal Team-->>Client: Deliver IT solution
+      </div>
+    </div>
+
+    <div class="diagram-container">
+      <h2>Flowchart Diagram</h2>
+      <div class="mermaid">
+flowchart TD
+    A[Client] -->|Provide Requirements| B[IT Consultant]
+    B --> C[Analyze Requirements]
+    C --> D[Check Existing IT Environment]
+    D --> E[Request Vendor Solutions]
+    E --> F[Evaluate and Propose Solution]
+    F --> G[Get Client Feedback/Approval]
+    G --> H[Initiate Implementation]
+    H --> I[Internal Team Delivers Solution]
+    I --> J[Client Receives IT Solution]
+    style A fill:#e3f2fd
+    style B fill:#bbdefb
+    style C fill:#c8e6c9
+    style D fill:#c8e6c9
+    style E fill:#fff9c4
+    style F fill:#d1c4e9
+    style G fill:#ffe0b2
+    style H fill:#ffccbc
+    style I fill:#b2ebf2
+    style J fill:#dcedc8
+      </div>
+    </div>
+  </div>
+</body>
+</html>
