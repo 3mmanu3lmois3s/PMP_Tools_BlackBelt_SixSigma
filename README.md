@@ -33,6 +33,7 @@ graph TD
   A --> B11[Estimations: PERT, EVM, CPM]
   A --> B12[DMAIC Process Templates]
   A --> B13[Project Charter Examples]
+  A --> B14[RACI Matrix]
 
 ```
 
@@ -53,6 +54,7 @@ graph TD
   [🧮 Estimations: PERT, EVM, CPM]
   [🔄 DMAIC Process Templates]
   [📌 Project Charter Examples]
+  [*  RACI Matrix]
 ```
 ---
 ## 🧠 Goal
